@@ -1,0 +1,4 @@
+---
+app_title: "My Ansible Sample Project"
+app_port: 8080
+app_user: "devops"

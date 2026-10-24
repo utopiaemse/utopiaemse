@@ -1,0 +1,16 @@
+---
+- name: Display deployment start message
+  ansible.builtin.debug:
+    msg: "Starting deployment of {{ app_title }} on {{ ansible_facts['hostname'] }}"
+
+- name: Ensure target directory exists
+  ansible.builtin.file:
+    path: "{{ webserver_docroot }}"
+    state: directory
+    mode: '0755'
+
+- name: Deploy custom index page template
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: "{{ webserver_docroot }}/{{ webserver_index_filename }}"
+    mode: '0644'
