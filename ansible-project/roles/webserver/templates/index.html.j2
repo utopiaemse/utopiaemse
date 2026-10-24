@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ app_title }}</title>
+</head>
+<body>
+    <h1>Welcome to {{ app_title }}!</h1>
+    <p>Server Port: {{ app_port }}</p>
+    <p>Deployment User: {{ app_user }}</p>
+    <p>Managed by Ansible on host: {{ ansible_facts['hostname'] }}</p>
+</body>
+</html>

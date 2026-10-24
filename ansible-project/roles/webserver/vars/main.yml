@@ -1,0 +1,3 @@
+---
+webserver_docroot: "/var/www/html"
+webserver_index_filename: "index.html"

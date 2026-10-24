@@ -1,0 +1,6 @@
+---
+- name: Deploy and Configure Web Server
+  hosts: webservers
+  gather_facts: true
+  roles:
+    - webserver
